@@ -4,7 +4,7 @@ console.log("Server started");
 
 const URL = Bun.env.MONITOR_URL;
 
-schedule("*/1 * * * *", async () => {
+schedule("*/5 * * * *", async () => {
   try {
     if (!URL) throw new Error("No URL defined");
     await fetch(URL);
