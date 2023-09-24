@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  ping:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ping
+    container_name: ping
+    restart: always
+    env_file: .env
+    environment:
+      - NODE_ENV=production
+   
+
