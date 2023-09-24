@@ -1,10 +1,12 @@
 import { schedule } from "node-cron";
 
-const URL = Bun.env.MONITOR_URL;
-if (!URL) throw new Error("No URL defined");
+console.log("Server started");
 
-schedule("*/10 * * * *", async () => {
+const URL = Bun.env.MONITOR_URL;
+
+schedule("*/1 * * * *", async () => {
   try {
+    if (!URL) throw new Error("No URL defined");
     await fetch(URL);
     console.log(`Ping sent at ${new Date().toISOString()}`);
   } catch (error) {
