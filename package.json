@@ -2,7 +2,7 @@
   "name": "ping",
   "module": "index.ts",
   "devDependencies": {
-    "@types/node-cron": "^3.0.9",
+    "@types/node-cron": "^3.0.11",
     "bun-types": "latest"
   },
   "peerDependencies": {
@@ -14,6 +14,6 @@
   },
   "type": "module",
   "dependencies": {
-    "node-cron": "^3.0.2"
+    "node-cron": "^3.0.3"
   }
 }
